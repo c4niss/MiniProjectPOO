@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.EstateAgencyController">
+   <top>
+      <MenuBar>
+         <menus>
+            <Menu text="File">
+               <items>
+                  <MenuItem text="Add Client" onAction="#handleAddClient" />
+                  <MenuItem text="Add Property" onAction="#handleAddProperty" />
+                  <MenuItem text="Add Transaction" onAction="#handleAddTransaction" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane>
+         <tabs>
+            <Tab text="Clients">
+               <content>
+                  <TableView fx:id="clientTable" onMouseClicked="#handleClientTableClick">
+                     <columns>
+                        <TableColumn text="Name" fx:id="nameColumn" />
+                        <TableColumn text="Type" fx:id="typeColumn" />
+                        <TableColumn text="Email" fx:id="emailColumn" />
+                        <TableColumn text="Phone" fx:id="phoneColumn" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab text="Properties">
+               <content>
+                  <TableView fx:id="propertyTable" onMouseClicked="#handlePropertyTableClick">
+                     <columns>
+                        <TableColumn text="Type" fx:id="typeColumn" />
+                        <TableColumn text="Size" fx:id="sizeColumn" />
+                        <TableColumn text="Price" fx:id="priceColumn" />
+                        <TableColumn text="Location" fx:id="locationColumn" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab text="Transactions">
+               <content>
+                  <TableView fx:id="transactionTable" onMouseClicked="#handleTransactionTableClick">
+                     <columns>
+                        <TableColumn text="Type" fx:id="typeColumn" />
+                        <TableColumn text="Amount" fx:id="amountColumn" />
+                        <TableColumn text="Date" fx:id="dateColumn" />
+                        <TableColumn text="Client" fx:id="clientColumn" />
+                     </columns>
